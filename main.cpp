@@ -1,4 +1,5 @@
-#include "station.h"
+#include "src/station.h"
+
 #include <iostream>
 #include <queue>
 
@@ -6,7 +7,7 @@ using namespace std;
 
 int main()
 {
-    station work;
+    station::TestStation work;
     int process;
     string introduction = "===========\n\
     [Function]\n\
@@ -26,23 +27,23 @@ int main()
         switch (process)
         {
         case 1:
-            work.set_station();
+            work.SetStation();
             break;
         case 2:
-            work.set_input();
+            work.SetDut();
             break;
         case 3:
-            work.show_config();
+            work.ShowConfig();
             break;
         case 4:
-            work.process_start();
-            work.process_init();
+            work.ProcessStart();
+            work.ProcessInit();
             break;
         case 5:
-            work.show_products();
+            work.ShowProducts();
             break;
         case 6:
-            work.show_station_count();
+            work.ShowStationCount();
             break;
         default:
             cout << "Exit" << endl;
